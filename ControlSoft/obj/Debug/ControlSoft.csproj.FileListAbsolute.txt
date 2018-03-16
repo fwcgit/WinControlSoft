@@ -1,0 +1,10 @@
+c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\bin\Debug\ControlSoft.exe.config
+c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\bin\Debug\ControlSoft.exe
+c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\bin\Debug\ControlSoft.pdb
+c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\obj\Debug\ControlSoft.Properties.Resources.resources
+c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\obj\Debug\ControlSoft.csproj.GenerateResource.Cache
+c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\obj\Debug\ControlSoft.exe
+c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\obj\Debug\ControlSoft.pdb
+c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\obj\Debug\ControlSoft.wMain.resources
+c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\obj\Debug\ControlSoft.UI.TempName.resources
+c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\obj\Debug\ControlSoft.csprojResolveAssemblyReference.cache
