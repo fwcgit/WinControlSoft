@@ -15,8 +15,10 @@ namespace ControlSoft.src.usart
         private Thread dataThread;
         private bool isReceive = false;
         public DataCallBack dataCallBack;
-        private bool start = false;
-        private bool stop = false;
+        private bool start      = false;
+        private bool stop       = false;
+ 
+
         private int dataIndex;
         public void init(string port)
         {
@@ -122,20 +124,23 @@ namespace ControlSoft.src.usart
                         dataIndex = 0;
                         buffer[dataIndex] = data;
 
-                    }else if(data == 0x0d && start)
+                    }else if(dataIndex>=TelProtocol.PROTOCOL_HEAD_END_SIZE && start)
                     {
-                        start = false;
                         stop = true;
                         buffer[dataIndex] = data;
                     }
-                    else if(start)
+                    else
                     {
                         buffer[dataIndex] = data;
                     }
+                    
 
                     if (stop)
                     {
+                        start = false;
+                        stop = false;
                         if (null != dataCallBack) dataCallBack.receiveData(buffer, dataIndex);
+
                     }
                    
                     dataIndex++;

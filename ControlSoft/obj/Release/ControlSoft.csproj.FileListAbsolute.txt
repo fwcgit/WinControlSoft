@@ -8,3 +8,15 @@ c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\obj
 c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\obj\Release\ControlSoft.pdb
 c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\obj\Release\ControlSoft.csprojResolveAssemblyReference.cache
 c:\users\fuwin\documents\visual studio 2015\Projects\ControlSoft\ControlSoft\obj\Release\ControlSoft.UI.TempName.resources
+E:\visual studio\Projects\WinControlSoft\ControlSoft\bin\Release\ControlSoft.exe.config
+E:\visual studio\Projects\WinControlSoft\ControlSoft\bin\Release\ControlSoft.exe
+E:\visual studio\Projects\WinControlSoft\ControlSoft\bin\Release\ControlSoft.pdb
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.csprojResolveAssemblyReference.cache
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.wMain.resources
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.Properties.Resources.resources
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.UI.SoftMonitoring.resources
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.UI.TempName.resources
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.csproj.GenerateResource.cache
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.csproj.CoreCompileInputs.cache
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.exe
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.pdb

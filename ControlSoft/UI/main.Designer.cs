@@ -37,6 +37,15 @@
             this.版本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.联系方式ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxTemp = new System.Windows.Forms.GroupBox();
+            this.labelTemp9 = new System.Windows.Forms.Label();
+            this.labelTemp8 = new System.Windows.Forms.Label();
+            this.labelTemp7 = new System.Windows.Forms.Label();
+            this.labelTemp6 = new System.Windows.Forms.Label();
+            this.labelTemp5 = new System.Windows.Forms.Label();
+            this.labelTemp4 = new System.Windows.Forms.Label();
+            this.labelTemp3 = new System.Windows.Forms.Label();
+            this.labelTemp2 = new System.Windows.Forms.Label();
+            this.labelTemp1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,28 +58,28 @@
             this.groupBoxM = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonWaterTwoAuto = new System.Windows.Forms.Button();
+            this.buttonWaterTwoClose = new System.Windows.Forms.Button();
+            this.buttonWaterTwoLow = new System.Windows.Forms.Button();
+            this.buttonWaterTwoMid = new System.Windows.Forms.Button();
+            this.buttonWaterTwoHigh = new System.Windows.Forms.Button();
+            this.buttonWaterAuto = new System.Windows.Forms.Button();
+            this.buttonWaterClose = new System.Windows.Forms.Button();
+            this.buttonWaterLow = new System.Windows.Forms.Button();
+            this.buttonWaterMid = new System.Windows.Forms.Button();
+            this.buttonWaterHigh = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.buttonHotAuto = new System.Windows.Forms.Button();
+            this.buttonHotClose = new System.Windows.Forms.Button();
+            this.buttonHotLow = new System.Windows.Forms.Button();
+            this.buttonHotMid = new System.Windows.Forms.Button();
+            this.buttonHotHigh = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolConnectStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBoxTemp.SuspendLayout();
             this.groupBoxM.SuspendLayout();
@@ -103,19 +112,20 @@
             // test1ToolStripMenuItem
             // 
             this.test1ToolStripMenuItem.Name = "test1ToolStripMenuItem";
-            this.test1ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.test1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.test1ToolStripMenuItem.Text = "设备";
             // 
             // 软件监控ToolStripMenuItem
             // 
             this.软件监控ToolStripMenuItem.Name = "软件监控ToolStripMenuItem";
-            this.软件监控ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.软件监控ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.软件监控ToolStripMenuItem.Text = "软件监控";
+            this.软件监控ToolStripMenuItem.Click += new System.EventHandler(this.软件监控ToolStripMenuItem_Click);
             // 
             // 温度名称ToolStripMenuItem
             // 
             this.温度名称ToolStripMenuItem.Name = "温度名称ToolStripMenuItem";
-            this.温度名称ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.温度名称ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.温度名称ToolStripMenuItem.Text = "温度名称";
             this.温度名称ToolStripMenuItem.Click += new System.EventHandler(this.温度名称ToolStripMenuItem_Click);
             // 
@@ -142,6 +152,15 @@
             // 
             // groupBoxTemp
             // 
+            this.groupBoxTemp.Controls.Add(this.labelTemp9);
+            this.groupBoxTemp.Controls.Add(this.labelTemp8);
+            this.groupBoxTemp.Controls.Add(this.labelTemp7);
+            this.groupBoxTemp.Controls.Add(this.labelTemp6);
+            this.groupBoxTemp.Controls.Add(this.labelTemp5);
+            this.groupBoxTemp.Controls.Add(this.labelTemp4);
+            this.groupBoxTemp.Controls.Add(this.labelTemp3);
+            this.groupBoxTemp.Controls.Add(this.labelTemp2);
+            this.groupBoxTemp.Controls.Add(this.labelTemp1);
             this.groupBoxTemp.Controls.Add(this.label9);
             this.groupBoxTemp.Controls.Add(this.label8);
             this.groupBoxTemp.Controls.Add(this.label7);
@@ -158,15 +177,114 @@
             this.groupBoxTemp.TabStop = false;
             this.groupBoxTemp.Text = "温度";
             // 
+            // labelTemp9
+            // 
+            this.labelTemp9.AutoSize = true;
+            this.labelTemp9.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelTemp9.ForeColor = System.Drawing.Color.Red;
+            this.labelTemp9.Location = new System.Drawing.Point(128, 234);
+            this.labelTemp9.Name = "labelTemp9";
+            this.labelTemp9.Size = new System.Drawing.Size(48, 16);
+            this.labelTemp9.TabIndex = 20;
+            this.labelTemp9.Text = "--.--";
+            // 
+            // labelTemp8
+            // 
+            this.labelTemp8.AutoSize = true;
+            this.labelTemp8.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelTemp8.ForeColor = System.Drawing.Color.Red;
+            this.labelTemp8.Location = new System.Drawing.Point(128, 209);
+            this.labelTemp8.Name = "labelTemp8";
+            this.labelTemp8.Size = new System.Drawing.Size(48, 16);
+            this.labelTemp8.TabIndex = 19;
+            this.labelTemp8.Text = "--.--";
+            // 
+            // labelTemp7
+            // 
+            this.labelTemp7.AutoSize = true;
+            this.labelTemp7.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelTemp7.ForeColor = System.Drawing.Color.Red;
+            this.labelTemp7.Location = new System.Drawing.Point(128, 184);
+            this.labelTemp7.Name = "labelTemp7";
+            this.labelTemp7.Size = new System.Drawing.Size(48, 16);
+            this.labelTemp7.TabIndex = 18;
+            this.labelTemp7.Text = "--.--";
+            // 
+            // labelTemp6
+            // 
+            this.labelTemp6.AutoSize = true;
+            this.labelTemp6.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelTemp6.ForeColor = System.Drawing.Color.Red;
+            this.labelTemp6.Location = new System.Drawing.Point(128, 159);
+            this.labelTemp6.Name = "labelTemp6";
+            this.labelTemp6.Size = new System.Drawing.Size(48, 16);
+            this.labelTemp6.TabIndex = 17;
+            this.labelTemp6.Text = "--.--";
+            // 
+            // labelTemp5
+            // 
+            this.labelTemp5.AutoSize = true;
+            this.labelTemp5.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelTemp5.ForeColor = System.Drawing.Color.Red;
+            this.labelTemp5.Location = new System.Drawing.Point(128, 134);
+            this.labelTemp5.Name = "labelTemp5";
+            this.labelTemp5.Size = new System.Drawing.Size(48, 16);
+            this.labelTemp5.TabIndex = 16;
+            this.labelTemp5.Text = "--.--";
+            // 
+            // labelTemp4
+            // 
+            this.labelTemp4.AutoSize = true;
+            this.labelTemp4.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelTemp4.ForeColor = System.Drawing.Color.Red;
+            this.labelTemp4.Location = new System.Drawing.Point(128, 109);
+            this.labelTemp4.Name = "labelTemp4";
+            this.labelTemp4.Size = new System.Drawing.Size(48, 16);
+            this.labelTemp4.TabIndex = 15;
+            this.labelTemp4.Text = "--.--";
+            // 
+            // labelTemp3
+            // 
+            this.labelTemp3.AutoSize = true;
+            this.labelTemp3.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelTemp3.ForeColor = System.Drawing.Color.Red;
+            this.labelTemp3.Location = new System.Drawing.Point(128, 84);
+            this.labelTemp3.Name = "labelTemp3";
+            this.labelTemp3.Size = new System.Drawing.Size(48, 16);
+            this.labelTemp3.TabIndex = 14;
+            this.labelTemp3.Text = "--.--";
+            // 
+            // labelTemp2
+            // 
+            this.labelTemp2.AutoSize = true;
+            this.labelTemp2.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelTemp2.ForeColor = System.Drawing.Color.Red;
+            this.labelTemp2.Location = new System.Drawing.Point(128, 59);
+            this.labelTemp2.Name = "labelTemp2";
+            this.labelTemp2.Size = new System.Drawing.Size(48, 16);
+            this.labelTemp2.TabIndex = 13;
+            this.labelTemp2.Text = "--.--";
+            // 
+            // labelTemp1
+            // 
+            this.labelTemp1.AutoSize = true;
+            this.labelTemp1.Font = new System.Drawing.Font("宋体", 12F);
+            this.labelTemp1.ForeColor = System.Drawing.Color.Red;
+            this.labelTemp1.Location = new System.Drawing.Point(128, 34);
+            this.labelTemp1.Name = "labelTemp1";
+            this.labelTemp1.Size = new System.Drawing.Size(48, 16);
+            this.labelTemp1.TabIndex = 8;
+            this.labelTemp1.Text = "--.--";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label9.Location = new System.Drawing.Point(6, 234);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 16);
+            this.label9.Size = new System.Drawing.Size(80, 16);
             this.label9.TabIndex = 12;
-            this.label9.Text = "温度：";
+            this.label9.Text = "9、温度：";
             // 
             // label8
             // 
@@ -268,16 +386,16 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button12);
-            this.groupBox3.Controls.Add(this.button13);
-            this.groupBox3.Controls.Add(this.button14);
-            this.groupBox3.Controls.Add(this.button15);
-            this.groupBox3.Controls.Add(this.button16);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.buttonWaterTwoAuto);
+            this.groupBox3.Controls.Add(this.buttonWaterTwoClose);
+            this.groupBox3.Controls.Add(this.buttonWaterTwoLow);
+            this.groupBox3.Controls.Add(this.buttonWaterTwoMid);
+            this.groupBox3.Controls.Add(this.buttonWaterTwoHigh);
+            this.groupBox3.Controls.Add(this.buttonWaterAuto);
+            this.groupBox3.Controls.Add(this.buttonWaterClose);
+            this.groupBox3.Controls.Add(this.buttonWaterLow);
+            this.groupBox3.Controls.Add(this.buttonWaterMid);
+            this.groupBox3.Controls.Add(this.buttonWaterHigh);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Location = new System.Drawing.Point(300, 67);
@@ -287,95 +405,105 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "水泵";
             // 
-            // button7
+            // buttonWaterTwoAuto
             // 
-            this.button7.Location = new System.Drawing.Point(298, 25);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "自动";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonWaterTwoAuto.Location = new System.Drawing.Point(138, 141);
+            this.buttonWaterTwoAuto.Name = "buttonWaterTwoAuto";
+            this.buttonWaterTwoAuto.Size = new System.Drawing.Size(75, 23);
+            this.buttonWaterTwoAuto.TabIndex = 11;
+            this.buttonWaterTwoAuto.Text = "自动";
+            this.buttonWaterTwoAuto.UseVisualStyleBackColor = true;
+            this.buttonWaterTwoAuto.Click += new System.EventHandler(this.buttonWaterTwoAuto_Click);
             // 
-            // button8
+            // buttonWaterTwoClose
             // 
-            this.button8.Location = new System.Drawing.Point(388, 25);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "关闭";
-            this.button8.UseVisualStyleBackColor = true;
+            this.buttonWaterTwoClose.Location = new System.Drawing.Point(138, 170);
+            this.buttonWaterTwoClose.Name = "buttonWaterTwoClose";
+            this.buttonWaterTwoClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonWaterTwoClose.TabIndex = 10;
+            this.buttonWaterTwoClose.Text = "关闭";
+            this.buttonWaterTwoClose.UseVisualStyleBackColor = true;
+            this.buttonWaterTwoClose.Click += new System.EventHandler(this.buttonWaterTwoClose_Click);
             // 
-            // button9
+            // buttonWaterTwoLow
             // 
-            this.button9.Location = new System.Drawing.Point(203, 25);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "低";
-            this.button9.UseVisualStyleBackColor = true;
+            this.buttonWaterTwoLow.Location = new System.Drawing.Point(138, 112);
+            this.buttonWaterTwoLow.Name = "buttonWaterTwoLow";
+            this.buttonWaterTwoLow.Size = new System.Drawing.Size(75, 23);
+            this.buttonWaterTwoLow.TabIndex = 9;
+            this.buttonWaterTwoLow.Text = "低";
+            this.buttonWaterTwoLow.UseVisualStyleBackColor = true;
+            this.buttonWaterTwoLow.Click += new System.EventHandler(this.buttonWaterTwoLow_Click);
             // 
-            // button10
+            // buttonWaterTwoMid
             // 
-            this.button10.Location = new System.Drawing.Point(109, 25);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "中";
-            this.button10.UseVisualStyleBackColor = true;
+            this.buttonWaterTwoMid.Location = new System.Drawing.Point(138, 83);
+            this.buttonWaterTwoMid.Name = "buttonWaterTwoMid";
+            this.buttonWaterTwoMid.Size = new System.Drawing.Size(75, 23);
+            this.buttonWaterTwoMid.TabIndex = 8;
+            this.buttonWaterTwoMid.Text = "中";
+            this.buttonWaterTwoMid.UseVisualStyleBackColor = true;
+            this.buttonWaterTwoMid.Click += new System.EventHandler(this.buttonWaterTwoMid_Click);
             // 
-            // button11
+            // buttonWaterTwoHigh
             // 
-            this.button11.Location = new System.Drawing.Point(15, 25);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "高";
-            this.button11.UseVisualStyleBackColor = true;
+            this.buttonWaterTwoHigh.Location = new System.Drawing.Point(138, 51);
+            this.buttonWaterTwoHigh.Name = "buttonWaterTwoHigh";
+            this.buttonWaterTwoHigh.Size = new System.Drawing.Size(75, 23);
+            this.buttonWaterTwoHigh.TabIndex = 7;
+            this.buttonWaterTwoHigh.Text = "高";
+            this.buttonWaterTwoHigh.UseVisualStyleBackColor = true;
+            this.buttonWaterTwoHigh.Click += new System.EventHandler(this.buttonWaterTwoHigh_Click);
             // 
-            // button6
+            // buttonWaterAuto
             // 
-            this.button6.Location = new System.Drawing.Point(15, 141);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "自动";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonWaterAuto.Location = new System.Drawing.Point(15, 141);
+            this.buttonWaterAuto.Name = "buttonWaterAuto";
+            this.buttonWaterAuto.Size = new System.Drawing.Size(75, 23);
+            this.buttonWaterAuto.TabIndex = 6;
+            this.buttonWaterAuto.Text = "自动";
+            this.buttonWaterAuto.UseVisualStyleBackColor = true;
+            this.buttonWaterAuto.Click += new System.EventHandler(this.buttonWaterAuto_Click);
             // 
-            // button5
+            // buttonWaterClose
             // 
-            this.button5.Location = new System.Drawing.Point(15, 170);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "关闭";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonWaterClose.Location = new System.Drawing.Point(15, 170);
+            this.buttonWaterClose.Name = "buttonWaterClose";
+            this.buttonWaterClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonWaterClose.TabIndex = 5;
+            this.buttonWaterClose.Text = "关闭";
+            this.buttonWaterClose.UseVisualStyleBackColor = true;
+            this.buttonWaterClose.Click += new System.EventHandler(this.buttonWaterClose_Click);
             // 
-            // button4
+            // buttonWaterLow
             // 
-            this.button4.Location = new System.Drawing.Point(15, 112);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "低";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonWaterLow.Location = new System.Drawing.Point(15, 112);
+            this.buttonWaterLow.Name = "buttonWaterLow";
+            this.buttonWaterLow.Size = new System.Drawing.Size(75, 23);
+            this.buttonWaterLow.TabIndex = 4;
+            this.buttonWaterLow.Text = "低";
+            this.buttonWaterLow.UseVisualStyleBackColor = true;
+            this.buttonWaterLow.Click += new System.EventHandler(this.buttonWaterLow_Click);
             // 
-            // button3
+            // buttonWaterMid
             // 
-            this.button3.Location = new System.Drawing.Point(15, 83);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "中";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonWaterMid.Location = new System.Drawing.Point(15, 83);
+            this.buttonWaterMid.Name = "buttonWaterMid";
+            this.buttonWaterMid.Size = new System.Drawing.Size(75, 23);
+            this.buttonWaterMid.TabIndex = 3;
+            this.buttonWaterMid.Text = "中";
+            this.buttonWaterMid.UseVisualStyleBackColor = true;
+            this.buttonWaterMid.Click += new System.EventHandler(this.buttonWaterMid_Click);
             // 
-            // button2
+            // buttonWaterHigh
             // 
-            this.button2.Location = new System.Drawing.Point(15, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "高";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonWaterHigh.Location = new System.Drawing.Point(15, 51);
+            this.buttonWaterHigh.Name = "buttonWaterHigh";
+            this.buttonWaterHigh.Size = new System.Drawing.Size(75, 23);
+            this.buttonWaterHigh.TabIndex = 2;
+            this.buttonWaterHigh.Text = "高";
+            this.buttonWaterHigh.UseVisualStyleBackColor = true;
+            this.buttonWaterHigh.Click += new System.EventHandler(this.buttonWaterHigh_Click);
             // 
             // label11
             // 
@@ -394,6 +522,56 @@
             this.label10.Size = new System.Drawing.Size(71, 12);
             this.label10.TabIndex = 0;
             this.label10.Text = "1、水泵流量";
+            // 
+            // buttonHotAuto
+            // 
+            this.buttonHotAuto.Location = new System.Drawing.Point(298, 25);
+            this.buttonHotAuto.Name = "buttonHotAuto";
+            this.buttonHotAuto.Size = new System.Drawing.Size(75, 23);
+            this.buttonHotAuto.TabIndex = 11;
+            this.buttonHotAuto.Text = "自动";
+            this.buttonHotAuto.UseVisualStyleBackColor = true;
+            this.buttonHotAuto.Click += new System.EventHandler(this.buttonHotAuto_Click);
+            // 
+            // buttonHotClose
+            // 
+            this.buttonHotClose.Location = new System.Drawing.Point(388, 25);
+            this.buttonHotClose.Name = "buttonHotClose";
+            this.buttonHotClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonHotClose.TabIndex = 10;
+            this.buttonHotClose.Text = "关闭";
+            this.buttonHotClose.UseVisualStyleBackColor = true;
+            this.buttonHotClose.Click += new System.EventHandler(this.buttonHotClose_Click);
+            // 
+            // buttonHotLow
+            // 
+            this.buttonHotLow.Location = new System.Drawing.Point(203, 25);
+            this.buttonHotLow.Name = "buttonHotLow";
+            this.buttonHotLow.Size = new System.Drawing.Size(75, 23);
+            this.buttonHotLow.TabIndex = 9;
+            this.buttonHotLow.Text = "低";
+            this.buttonHotLow.UseVisualStyleBackColor = true;
+            this.buttonHotLow.Click += new System.EventHandler(this.buttonHotLow_Click);
+            // 
+            // buttonHotMid
+            // 
+            this.buttonHotMid.Location = new System.Drawing.Point(109, 25);
+            this.buttonHotMid.Name = "buttonHotMid";
+            this.buttonHotMid.Size = new System.Drawing.Size(75, 23);
+            this.buttonHotMid.TabIndex = 8;
+            this.buttonHotMid.Text = "中";
+            this.buttonHotMid.UseVisualStyleBackColor = true;
+            this.buttonHotMid.Click += new System.EventHandler(this.buttonHotMid_Click);
+            // 
+            // buttonHotHigh
+            // 
+            this.buttonHotHigh.Location = new System.Drawing.Point(15, 25);
+            this.buttonHotHigh.Name = "buttonHotHigh";
+            this.buttonHotHigh.Size = new System.Drawing.Size(75, 23);
+            this.buttonHotHigh.TabIndex = 7;
+            this.buttonHotHigh.Text = "高";
+            this.buttonHotHigh.UseVisualStyleBackColor = true;
+            this.buttonHotHigh.Click += new System.EventHandler(this.buttonHotHigh_Click);
             // 
             // statusStrip1
             // 
@@ -432,62 +610,17 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.button11);
-            this.groupBox1.Controls.Add(this.button10);
-            this.groupBox1.Controls.Add(this.button9);
+            this.groupBox1.Controls.Add(this.buttonHotAuto);
+            this.groupBox1.Controls.Add(this.buttonHotClose);
+            this.groupBox1.Controls.Add(this.buttonHotHigh);
+            this.groupBox1.Controls.Add(this.buttonHotMid);
+            this.groupBox1.Controls.Add(this.buttonHotLow);
             this.groupBox1.Location = new System.Drawing.Point(300, 282);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(486, 67);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "散热风扇";
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(138, 141);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 11;
-            this.button12.Text = "自动";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(138, 170);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 10;
-            this.button13.Text = "关闭";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(138, 112);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 9;
-            this.button14.Text = "低";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(138, 83);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 8;
-            this.button15.Text = "中";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(138, 51);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 7;
-            this.button16.Text = "高";
-            this.button16.UseVisualStyleBackColor = true;
             // 
             // wMain
             // 
@@ -504,7 +637,9 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "wMain";
+            this.Text = "智能散热系统";
             this.Load += new System.EventHandler(this.wMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -548,24 +683,33 @@
         private System.Windows.Forms.ToolStripStatusLabel toolConnectStatus;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonHotAuto;
+        private System.Windows.Forms.Button buttonHotClose;
+        private System.Windows.Forms.Button buttonHotLow;
+        private System.Windows.Forms.Button buttonHotMid;
+        private System.Windows.Forms.Button buttonHotHigh;
+        private System.Windows.Forms.Button buttonWaterAuto;
+        private System.Windows.Forms.Button buttonWaterClose;
+        private System.Windows.Forms.Button buttonWaterLow;
+        private System.Windows.Forms.Button buttonWaterMid;
+        private System.Windows.Forms.Button buttonWaterHigh;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button buttonWaterTwoAuto;
+        private System.Windows.Forms.Button buttonWaterTwoClose;
+        private System.Windows.Forms.Button buttonWaterTwoLow;
+        private System.Windows.Forms.Button buttonWaterTwoMid;
+        private System.Windows.Forms.Button buttonWaterTwoHigh;
+        private System.Windows.Forms.Label labelTemp9;
+        private System.Windows.Forms.Label labelTemp8;
+        private System.Windows.Forms.Label labelTemp7;
+        private System.Windows.Forms.Label labelTemp6;
+        private System.Windows.Forms.Label labelTemp5;
+        private System.Windows.Forms.Label labelTemp4;
+        private System.Windows.Forms.Label labelTemp3;
+        private System.Windows.Forms.Label labelTemp2;
+        private System.Windows.Forms.Label labelTemp1;
     }
 }
 

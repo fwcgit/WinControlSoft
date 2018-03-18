@@ -9,7 +9,7 @@ namespace ControlSoft.src.usart
     class TelProtocol
     {
         public static byte PROTOCOL_HEAD_START      = 0x3B;
-        public static byte PROTOCOL_HEAD_END        = 0x0D;
+        public static byte PROTOCOL_HEAD_END_SIZE   = 26;
 
         public static byte PROTOCOL_UP_TEMP         = 0x40;
         public static byte PROTOCOL_UP_WATER_M_1    = 0x41;
@@ -25,6 +25,28 @@ namespace ControlSoft.src.usart
         {
             DeviceStatu statu = new DeviceStatu(buff);
             return statu;
+        }
+
+        public static byte[] CmdMLev(int type,int lev)
+        {
+            byte[] buffer = new byte[6];
+            buffer[0] = PROTOCOL_HEAD_START;
+            buffer[1] = 5;
+            buffer[2] = (byte)type;
+            buffer[3] = (byte)lev; ;
+            buffer[4] = getCodeCheck(buffer,0,2);
+
+            return buffer;
+        }
+
+        public static byte getCodeCheck(byte[] data,int start,int stop)
+        {
+            int val = 0;
+            for(int i = start; i <= stop; i++)
+            {
+                val += data[i];
+            }
+            return (byte)val;
         }
     }
 }

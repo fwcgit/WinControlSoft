@@ -13,7 +13,7 @@ namespace ControlSoft.src.usart
 
         DataParser dataParser;
         private UsartManager() {
-            dataParser = new DataParser();
+            dataParser = DataParser.parser;
         }
 
         private Usart usart = new Usart();

@@ -1,0 +1,11 @@
+E:\visual studio\Projects\WinControlSoft\ControlSoft\bin\x64\Release\ControlSoft.exe.config
+E:\visual studio\Projects\WinControlSoft\ControlSoft\bin\x64\Release\ControlSoft.exe
+E:\visual studio\Projects\WinControlSoft\ControlSoft\bin\x64\Release\ControlSoft.pdb
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\x64\Release\ControlSoft.wMain.resources
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\x64\Release\ControlSoft.Properties.Resources.resources
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\x64\Release\ControlSoft.UI.SoftMonitoring.resources
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\x64\Release\ControlSoft.UI.TempName.resources
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\x64\Release\ControlSoft.csproj.GenerateResource.cache
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\x64\Release\ControlSoft.csproj.CoreCompileInputs.cache
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\x64\Release\ControlSoft.exe
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\x64\Release\ControlSoft.pdb
