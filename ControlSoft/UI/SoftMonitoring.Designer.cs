@@ -32,13 +32,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -89,6 +89,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "报警";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(15, 82);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "硬件";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button8);
@@ -102,14 +111,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "异常动作";
             // 
-            // button2
+            // button8
             // 
-            this.button2.Location = new System.Drawing.Point(15, 82);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "硬件";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button8.Location = new System.Drawing.Point(15, 164);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 5;
+            this.button8.Text = "重新打开";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -148,22 +157,17 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "已添加";
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(15, 164);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "重新打开";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // listView2
             // 
+            this.listView2.FullRowSelect = true;
+            this.listView2.GridLines = true;
             this.listView2.Location = new System.Drawing.Point(6, 20);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(332, 176);
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listView2_MouseDown);
             // 
             // SoftMonitoring
             // 
@@ -174,8 +178,10 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "SoftMonitoring";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "软件监测设置";
             this.Load += new System.EventHandler(this.SoftMonitoring_Load);
             this.groupBox1.ResumeLayout(false);

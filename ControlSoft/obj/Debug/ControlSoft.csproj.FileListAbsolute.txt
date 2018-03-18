@@ -20,3 +20,6 @@ E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.exe
 E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.pdb
 E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.csprojResolveAssemblyReference.cache
 E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.UI.SoftMonitoring.resources
+E:\visual studio\Projects\WinControlSoft\ControlSoft\bin\Debug\Newtonsoft.Json.dll
+E:\visual studio\Projects\WinControlSoft\ControlSoft\bin\Debug\Newtonsoft.Json.xml
+E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.csproj.CopyComplete

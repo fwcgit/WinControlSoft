@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ControlSoft.src.bean;
 using ControlSoft.src.config;
 using ControlSoft.src.usart;
 using ControlSoft.UI;
@@ -57,17 +57,32 @@ namespace ControlSoft
 
             }
 
+            this.listView1.Columns.Add("进程名", listView1.Width - 5, HorizontalAlignment.Center); //一步添加
+
+            SoftList softList = AppConfig.appConfig.getSoftMonitoring();
+
+            listView1.BeginUpdate();
+            foreach (SoftBean soft in softList.softs)
+            {
+                ListViewItem lvi = new ListViewItem();
+
+                lvi.Text = soft.name;
+                listView1.Items.Add(lvi);
+
+            }
+
+            listView1.EndUpdate();
+
             string[] serialPortList = UsartManager.usartManager.getHostSerialPort();
             comboBox1.Items.AddRange(serialPortList);
             comboBox1.SelectedIndex = 0;
-
 
             DataParser.parser.setUpdate(upStatusData);
         }
 
         private void 温度名称ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new TempName().Show();
+            new TempName().ShowDialog();
            
         }
 
@@ -290,7 +305,7 @@ namespace ControlSoft
         private void 软件监控ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SoftMonitoring softMonitoring = new SoftMonitoring();
-            softMonitoring.Show();
+            softMonitoring.ShowDialog();
         }
     }
 

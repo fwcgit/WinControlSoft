@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ControlSoft.src.bean;
+using ControlSoft.src.config;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +23,9 @@ namespace ControlSoft.UI
 
         [DllImport("Shell32.dll")]
         public static extern int ExtractIcon(IntPtr h, string strx, int ii);
-        private int selectRow = 0;
+
+        public SoftList softList;
+
         SoftMonitoring softMonitoring;
         public SoftMonitoring()
         {
@@ -31,13 +36,30 @@ namespace ControlSoft.UI
         private void SoftMonitoring_Load(object sender, EventArgs e)
         {
 
+             
              InitList();
-          
+
+             this.listView2.Columns.Add("进程名", listView2.Width-5, HorizontalAlignment.Center); //一步添加
+
+             softList = AppConfig.appConfig.getSoftMonitoring();
+
+             listView2.BeginUpdate();
+             foreach (SoftBean soft in softList.softs)
+            {
+                ListViewItem lvi = new ListViewItem();
+
+                lvi.Text = soft.name;
+                listView2.Items.Add(lvi);
+               
+            }
+
+            listView2.EndUpdate();
         }
 
         public void InitList()
         {
             listView1.Clear();
+
             this.listView1.Columns.Add("进程名", 180, HorizontalAlignment.Center); //一步添加
             this.listView1.Columns.Add("ID", 100, HorizontalAlignment.Center); //
             this.listView1.Columns.Add("路径", 200, HorizontalAlignment.Center); //一步添加
@@ -123,7 +145,7 @@ namespace ControlSoft.UI
             if (e.Button == MouseButtons.Right)
             {
 
-                ContextMenuStrip menu = new AddOrganizationMenu(this,listView1);      //此处为下一步中创建的菜单  
+                ContextMenuStrip menu = new AddOrganizationMenu(this,listView1,listView2);      //此处为下一步中创建的菜单  
                 menu.Show(listView1, new Point(e.X, e.Y));
 
 
@@ -131,21 +153,38 @@ namespace ControlSoft.UI
             }
             else if (e.Button == MouseButtons.Left)
             {
-                selectRow = listView1.SelectedIndices.IndexOf(0);
+                
             }
         }
 
+        private void listView2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
 
+                ContextMenuStrip menu = new AddOrganizationMenu(this, listView2);      //此处为下一步中创建的菜单  
+                menu.Show(listView2, new Point(e.X, e.Y));
+
+
+
+            }
+            else if (e.Button == MouseButtons.Left)
+            {
+
+            }
+        }
     }
 
     class AddOrganizationMenu : ContextMenuStrip
     {
-        private ListView listView;
+        private ListView listView,selectListView;
         private SoftMonitoring softMonitoring;
-        public AddOrganizationMenu(SoftMonitoring softMonitoring, ListView listView)
+        public AddOrganizationMenu(SoftMonitoring softMonitoring, ListView listView,ListView selectListView)
         {
             this.softMonitoring = softMonitoring;
             this.listView = listView;
+            this.selectListView = selectListView;
+
             ToolStripDropDownItem tsi1 = (ToolStripDropDownItem)Items.Add("添加监控");                  //添加第一级菜单  
             ToolStripDropDownItem tsi2 = (ToolStripDropDownItem)Items.Add("打开程序位置");                  //添加第一级菜单  
             ToolStripDropDownItem tsi3 = (ToolStripDropDownItem)Items.Add("刷新");                  //添加第一级菜单  
@@ -155,9 +194,53 @@ namespace ControlSoft.UI
             tsi3.Click += RefreshList;
         }
 
+        public AddOrganizationMenu(SoftMonitoring softMonitoring,ListView selectListView)
+        {
+            this.softMonitoring = softMonitoring;
+            this.selectListView = selectListView;
+
+            ToolStripDropDownItem tsi1 = (ToolStripDropDownItem)Items.Add("移除");                  //添加第一级菜单  
+            tsi1.Click += DelMonitoring;
+          
+        }
+
+        private void DelMonitoring(object sender, EventArgs e)
+        {
+            if (selectListView.SelectedItems[0].SubItems.Count >= 1)
+            {
+                string name = selectListView.SelectedItems[0].SubItems[0].Text;
+                SoftDel(name);
+                selectListView.SelectedItems[0].Remove();
+                selectListView.Update();
+
+                string json = JsonConvert.SerializeObject(softMonitoring.softList);
+                AppConfig.appConfig.saveSoftMonitoring(json);
+            }
+        }
+
         private void addMonitoring(object sender, EventArgs e)
         {
-            MessageBox.Show(listView.SelectedItems[0].SubItems[0].Text);
+
+            if (listView.SelectedItems[0].SubItems.Count >= 3)
+            {
+                string name = listView.SelectedItems[0].SubItems[0].Text;
+                string path = listView.SelectedItems[0].SubItems[2].Text;
+
+                if (SoftExist(name))
+                {
+                    MessageBox.Show("已经存在!");
+                    return;
+                }
+
+                SoftBean soft = new SoftBean(name, path);
+                softMonitoring.softList.softs.Add(soft);
+
+                string json = JsonConvert.SerializeObject(softMonitoring.softList);
+                AppConfig.appConfig.saveSoftMonitoring(json);
+
+                AddSoftListView(name);
+            }
+
         }
 
         private void OpenSoftLocation(object sender, EventArgs e)
@@ -181,6 +264,42 @@ namespace ControlSoft.UI
         private void RefreshList(object sender, EventArgs e)
         {
             softMonitoring.InitList();
+        }
+
+        private bool SoftExist(String name)
+        {
+            foreach(SoftBean soft in softMonitoring.softList.softs)
+            {
+                if (soft.name.Equals(name))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private bool SoftDel(String name)
+        {
+            foreach (SoftBean soft in softMonitoring.softList.softs)
+            {
+                if (soft.name.Equals(name))
+                {
+                    softMonitoring.softList.softs.Remove(soft);
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private void AddSoftListView(string name)
+        {
+            ListViewItem lvi = new ListViewItem();
+           
+            lvi.Text = name;
+            selectListView.Items.Add(lvi);
+            selectListView.Update();
         }
     }
 }

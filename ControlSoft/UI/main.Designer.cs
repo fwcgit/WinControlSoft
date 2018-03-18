@@ -383,6 +383,7 @@
             this.listView1.Size = new System.Drawing.Size(220, 173);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // groupBox3
             // 
@@ -635,9 +636,9 @@
             this.Controls.Add(this.groupBoxM);
             this.Controls.Add(this.groupBoxTemp);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "wMain";
             this.Text = "智能散热系统";
             this.Load += new System.EventHandler(this.wMain_Load);
