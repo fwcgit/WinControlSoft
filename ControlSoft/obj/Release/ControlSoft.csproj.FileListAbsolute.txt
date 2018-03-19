@@ -20,3 +20,16 @@ E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.csp
 E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.csproj.CoreCompileInputs.cache
 E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.exe
 E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.pdb
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\bin\Release\ControlSoft.exe.config
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.exe
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.pdb
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\bin\Release\ControlSoft.exe
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\bin\Release\ControlSoft.pdb
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\bin\Release\Newtonsoft.Json.dll
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\bin\Release\Newtonsoft.Json.xml
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.csprojResolveAssemblyReference.cache
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.wMain.resources
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.Properties.Resources.resources
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.UI.SoftMonitoring.resources
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.UI.TempName.resources
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.csproj.GenerateResource.Cache

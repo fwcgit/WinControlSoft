@@ -23,3 +23,16 @@ E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.UI.So
 E:\visual studio\Projects\WinControlSoft\ControlSoft\bin\Debug\Newtonsoft.Json.dll
 E:\visual studio\Projects\WinControlSoft\ControlSoft\bin\Debug\Newtonsoft.Json.xml
 E:\visual studio\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.csproj.CopyComplete
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\bin\Debug\ControlSoft.exe.config
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\bin\Debug\ControlSoft.exe
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\bin\Debug\ControlSoft.pdb
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\bin\Debug\Newtonsoft.Json.dll
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\bin\Debug\Newtonsoft.Json.xml
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.csprojResolveAssemblyReference.cache
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.wMain.resources
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.Properties.Resources.resources
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.UI.SoftMonitoring.resources
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.UI.TempName.resources
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.csproj.GenerateResource.Cache
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.exe
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.pdb

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControlSoft.src.utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,9 @@ namespace ControlSoft.src.usart
         private UpDeviceStatu upStatu;
         public void receiveData(byte[] buffer,int count)
         {
+
+            if (!Utils.CheckCode(buffer)) return;
+
             for(int i = 0; i <= count; i++)
             {
                 System.Console.Out.WriteLine("{0:X}", buffer[i]);
