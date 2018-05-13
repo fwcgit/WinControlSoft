@@ -80,6 +80,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.固件升级ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBoxTemp.SuspendLayout();
             this.groupBoxM.SuspendLayout();
@@ -104,7 +105,8 @@
             this.testToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.test1ToolStripMenuItem,
             this.软件监控ToolStripMenuItem,
-            this.温度名称ToolStripMenuItem});
+            this.温度名称ToolStripMenuItem,
+            this.固件升级ToolStripMenuItem});
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
             this.testToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.testToolStripMenuItem.Text = "设置";
@@ -112,20 +114,20 @@
             // test1ToolStripMenuItem
             // 
             this.test1ToolStripMenuItem.Name = "test1ToolStripMenuItem";
-            this.test1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.test1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.test1ToolStripMenuItem.Text = "设备";
             // 
             // 软件监控ToolStripMenuItem
             // 
             this.软件监控ToolStripMenuItem.Name = "软件监控ToolStripMenuItem";
-            this.软件监控ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.软件监控ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.软件监控ToolStripMenuItem.Text = "软件监控";
             this.软件监控ToolStripMenuItem.Click += new System.EventHandler(this.软件监控ToolStripMenuItem_Click);
             // 
             // 温度名称ToolStripMenuItem
             // 
             this.温度名称ToolStripMenuItem.Name = "温度名称ToolStripMenuItem";
-            this.温度名称ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.温度名称ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.温度名称ToolStripMenuItem.Text = "温度名称";
             this.温度名称ToolStripMenuItem.Click += new System.EventHandler(this.温度名称ToolStripMenuItem_Click);
             // 
@@ -623,6 +625,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "散热风扇";
             // 
+            // 固件升级ToolStripMenuItem
+            // 
+            this.固件升级ToolStripMenuItem.Name = "固件升级ToolStripMenuItem";
+            this.固件升级ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.固件升级ToolStripMenuItem.Text = "固件升级";
+            this.固件升级ToolStripMenuItem.Click += new System.EventHandler(this.固件升级ToolStripMenuItem_Click);
+            // 
             // wMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -711,6 +720,7 @@
         private System.Windows.Forms.Label labelTemp3;
         private System.Windows.Forms.Label labelTemp2;
         private System.Windows.Forms.Label labelTemp1;
+        private System.Windows.Forms.ToolStripMenuItem 固件升级ToolStripMenuItem;
     }
 }
 

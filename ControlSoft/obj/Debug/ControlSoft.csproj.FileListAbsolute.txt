@@ -36,3 +36,4 @@ C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\
 C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.csproj.GenerateResource.Cache
 C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.exe
 C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.pdb
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Debug\ControlSoft.UI.FirmwareDownload.resources

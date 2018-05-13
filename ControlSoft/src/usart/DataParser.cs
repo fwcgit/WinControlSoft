@@ -18,11 +18,11 @@ namespace ControlSoft.src.usart
         public void receiveData(byte[] buffer,int count)
         {
 
-            if (!Utils.CheckCode(buffer)) return;
+           // if (!Utils.CheckCode(buffer)) return;
 
             for(int i = 0; i <= count; i++)
             {
-                System.Console.Out.WriteLine("{0:X}", buffer[i]);
+                System.Console.Out.WriteLine("0x{0:X}", buffer[i]);
             }
             DeviceStatu deviceStatu = TelProtocol.parserStatu(buffer);
             if (null != upStatu) upStatu(deviceStatu);

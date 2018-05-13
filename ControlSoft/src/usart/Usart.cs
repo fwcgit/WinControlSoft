@@ -17,7 +17,7 @@ namespace ControlSoft.src.usart
         public DataCallBack dataCallBack;
         private bool start      = false;
         private bool stop       = false;
- 
+        List<DataCallBack> calllbacks = new List<DataCallBack>();
 
         private int dataIndex;
         public void init(string port)
@@ -69,6 +69,14 @@ namespace ControlSoft.src.usart
             this.dataCallBack = callback;
         }
 
+        public void addCallBak(DataCallBack callback)
+        {
+             if(!calllbacks.Contains(callback))
+            {
+                calllbacks.Add(callback);
+            }
+        }
+
         public bool isOpen()
         {
             if (null != serialPort)
@@ -99,50 +107,78 @@ namespace ControlSoft.src.usart
             }
         }
 
+        public void write(byte[] data,int len)
+        {
+            if (null != serialPort)
+            {
+                serialPort.Write(data, 0, len);
+            }
+        }
+
         public  void SerialDataHandler()
         {
-            byte[] buffer = new byte[100];
+            byte[] buffer = new byte[4096];
+            int datalen = 0;
 
             while (isReceive)
             {
                 if(null != serialPort && serialPort.IsOpen)
                 {
-                    
-                    byte data =(byte)(serialPort.ReadByte() & 0xff);
 
-                    if(dataIndex >= 100)
+                    byte data = 0;
+                    try
+                    {
+                        data = (byte)(serialPort.ReadByte() & 0xff);
+                        System.Console.Out.WriteLine("0x{0:X} ", data);
+                    }
+                    catch(Exception e)
+                    {
+                        System.Console.Out.WriteLine(e.Message);
+                    }
+                  
+                    if(dataIndex >= 4096)
                     {
                         start = false;
                         stop = false;
                         dataIndex = 0;
                     }
 
-                    if(data == 0x3b && !start)
+                    if (start)
+                    {
+                        buffer[dataIndex] = data;
+                    }
+
+                    if (data == 0xa0 && !start)
                     {
                         start = true;
                         stop = false;
                         dataIndex = 0;
+                        datalen = 0;
                         buffer[dataIndex] = data;
+                    }
+                    else if (start && dataIndex == 3)
+                    {
+                        datalen = buffer[3];
+                        datalen = datalen << 8;
+                        datalen = datalen | buffer[2];
+                    }
 
-                    }else if(dataIndex>=TelProtocol.PROTOCOL_HEAD_END_SIZE && start)
+                    if (start && dataIndex >= 3 && dataIndex - 3 == datalen)
                     {
                         stop = true;
-                        buffer[dataIndex] = data;
                     }
-                    else
-                    {
-                        buffer[dataIndex] = data;
-                    }
-                    
 
                     if (stop)
                     {
                         start = false;
                         stop = false;
-                        if (null != dataCallBack) dataCallBack.receiveData(buffer, dataIndex);
-
+                        
+                        foreach (DataCallBack cb in calllbacks)
+                        {
+                            if (null != cb) cb.receiveData(buffer, dataIndex);
+                        }
                     }
-                   
+
                     dataIndex++;
 
                 }

@@ -37,6 +37,11 @@ namespace ControlSoft.src.usart
             usart.write(data);
         }
 
+        public void writeData(byte[] data,int len)
+        {
+            usart.write(data, len);
+        }
+
         public bool isSerialPortOpen()
         {
             bool b = usart.isOpen();
@@ -51,7 +56,7 @@ namespace ControlSoft.src.usart
 
         public void addDataListener(Usart.DataCallBack callback)
         {
-            usart.setReceiveListener(callback);
+            usart.addCallBak(callback);
         }
 
         public string[] getHostSerialPort()

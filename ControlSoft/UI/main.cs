@@ -307,6 +307,12 @@ namespace ControlSoft
             SoftMonitoring softMonitoring = new SoftMonitoring();
             softMonitoring.ShowDialog();
         }
+
+        private void 固件升级ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FirmwareDownload fd = new FirmwareDownload();
+            fd.ShowDialog();
+        }
     }
 
 

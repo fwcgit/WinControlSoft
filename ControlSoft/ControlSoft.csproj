@@ -79,11 +79,19 @@
     <Compile Include="src\bean\SoftBean.cs" />
     <Compile Include="src\bean\SoftList.cs" />
     <Compile Include="src\config\AppConfig.cs" />
+    <Compile Include="src\firmware\TelFirmware.cs" />
     <Compile Include="src\usart\DataParser.cs" />
     <Compile Include="src\usart\DeviceStatu.cs" />
     <Compile Include="src\usart\TelProtocol.cs" />
     <Compile Include="src\usart\Usart.cs" />
     <Compile Include="src\usart\UsartManager.cs" />
+    <Compile Include="src\utils\Utils.cs" />
+    <Compile Include="UI\FirmwareDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FirmwareDownload.Designer.cs">
+      <DependentUpon>FirmwareDownload.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +112,9 @@
     <Compile Include="UI\TempName.Designer.cs">
       <DependentUpon>TempName.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\FirmwareDownload.resx">
+      <DependentUpon>FirmwareDownload.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>

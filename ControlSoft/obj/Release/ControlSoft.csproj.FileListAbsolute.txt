@@ -33,3 +33,4 @@ C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\
 C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.UI.SoftMonitoring.resources
 C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.UI.TempName.resources
 C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.csproj.GenerateResource.Cache
+C:\Users\fuwin\Documents\Visual Studio 2015\Projects\WinControlSoft\ControlSoft\obj\Release\ControlSoft.UI.FirmwareDownload.resources
